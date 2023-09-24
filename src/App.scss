@@ -1,0 +1,67 @@
+@keyframes rotazione {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cambio-colore {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: rgb(0, 255, 0);
+    }
+
+    50% {
+        color: rgb(75, 75, 255);
+    }
+
+    75% {
+        color: rgb(0, 255, 0);
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+html {
+    background: linear-gradient(to bottom right, rgb(216, 122, 0), rgb(190, 204, 0));
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.blurred {
+    filter: blur(0.5rem);
+    transition: filter 0.45s;
+}
+
+.made-with-react {
+    width: 9rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    
+    span {
+        animation: cambio-colore 10s linear infinite;
+    }
+}
+
+#react-icon {
+    vertical-align: middle;
+    width: 2rem;
+    height: 2rem;
+    animation: rotazione 4s linear infinite;
+}
